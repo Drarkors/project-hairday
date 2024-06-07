@@ -1,4 +1,7 @@
 {
+  "name": "Hairday",
+  "description": "Aplicação Web para agendamento de corte de cabelo.",
+  "author": "Rafael F. Zanetti",
   "scripts": {
     "server": "json-server --watch server.json --port 3333"
   },
