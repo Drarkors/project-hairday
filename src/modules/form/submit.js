@@ -23,7 +23,7 @@ form.onsubmit = (event) => {
     const hourSelected = document.querySelector(".hour-selected");
 
     if (!hourSelected) {
-      return alert("Selecione a hora do atendimenot!");
+      return alert("Selecione a hora do atendimento!");
     }
 
     const [hour] = hourSelected.innerText.split(":");

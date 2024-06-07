@@ -5,6 +5,8 @@ import { openingHours } from "../../utils/opening-hours";
 const hoursList = document.getElementById("hours");
 
 export function hoursLoad({ date }) {
+  hoursList.innerHTML = "";
+
   const opening = openingHours.map((hour) => {
     const [scheduledHour] = hour.split(":");
 
