@@ -10,10 +10,9 @@ Para dependências externas, utilizamos do NPM para gerenciar os pacotes e suas 
 
 #### 🛠️ Tecnologias
 
-<div style="display: grid; grid-template-columns: 20px 1fr; gap: 8px;">
 <img src="./git-resources/webpack-logo.png" style="width: 20px"> Webpack: https://webpack.js.org
+
 <img src="./git-resources/babel-logo.png" style="width: 20px"> Babel: https://babeljs.io
-</div>
 
 ---
 
