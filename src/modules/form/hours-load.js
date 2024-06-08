@@ -4,18 +4,24 @@ import { openingHours } from "../../utils/opening-hours";
 
 const hoursList = document.getElementById("hours");
 
-export function hoursLoad({ date }) {
+export function hoursLoad({ date, daySchedules }) {
   hoursList.innerHTML = "";
+
+  const unavailableHours = daySchedules.map((schedule) =>
+    dayjs(schedule.when).format("HH:mm")
+  );
 
   const opening = openingHours.map((hour) => {
     const [scheduledHour] = hour.split(":");
 
     // Check if hour has passed
-    const isHourPast = dayjs(date).add(scheduledHour, "hour").isAfter(dayjs());
+    const isHourPast = dayjs(date).add(scheduledHour, "hour").isBefore(dayjs());
+
+    const available = !unavailableHours.includes(hour) && !isHourPast;
 
     return {
       hour,
-      available: isHourPast,
+      available,
     };
   });
 
